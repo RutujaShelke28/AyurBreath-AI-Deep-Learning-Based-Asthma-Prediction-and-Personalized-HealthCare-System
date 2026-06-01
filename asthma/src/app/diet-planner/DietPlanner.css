@@ -1,0 +1,261 @@
+.patient-diet-page {
+  min-height: 100vh;
+  padding: 40px 40px;
+  width: 100%;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+}
+
+.diet-container {
+  max-width: 1200px;
+  padding: 0;
+}
+
+.diet-header {
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.diet-header h1 {
+  font-size: 2.5rem;
+  color: var(--gray-900);
+  margin-bottom: 12px;
+}
+
+.diet-header p {
+  color: var(--gray-600);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0;
+}
+
+.no-plan-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 50px 30px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px dashed var(--gray-300);
+}
+
+.no-plan-card h2 {
+  color: var(--gray-800);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.no-plan-card p {
+  color: var(--gray-600);
+  max-width: 500px;
+  margin: 0 auto 20px;
+}
+
+.plan-details {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+}
+
+/* Card View */
+.diet-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: flex-start;
+}
+
+.diet-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f4fbf7 100%);
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(106, 168, 142, 0.08);
+  border: 1px solid rgba(106, 168, 142, 0.15);
+  width: 320px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.diet-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--green-400), var(--teal-600));
+  opacity: 0.8;
+}
+
+.diet-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(106, 168, 142, 0.15);
+  border-color: rgba(106, 168, 142, 0.3);
+}
+
+.diet-card-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--green-50), #e6f2ec);
+  color: var(--green-700);
+  border: 3px solid white;
+  box-shadow: 0 4px 10px rgba(106, 168, 142, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.diet-card h3 {
+  font-size: 1.3rem;
+  color: var(--gray-900);
+  margin-bottom: 5px;
+}
+
+.diet-card .subtitle {
+  color: var(--green-600);
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.diet-card .date-badge {
+  background: white;
+  border: 1px solid var(--gray-200);
+  color: var(--gray-600);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.diet-card .view-btn {
+  background: linear-gradient(135deg, var(--green-500), var(--teal-600));
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 30px;
+  font-weight: 600;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 12px rgba(91, 149, 125, 0.3);
+}
+
+.diet-card .view-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(91, 149, 125, 0.4);
+}
+
+/* Modal */
+.diet-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.diet-modal-content {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  max-width: 700px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--gray-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  z-index: 10;
+}
+
+.close-modal-btn:hover {
+  color: var(--gray-900);
+  background: var(--gray-100);
+  border-radius: 50%;
+}
+
+.plan-meta {
+  background: linear-gradient(135deg, var(--green-600), var(--teal-600));
+  color: white;
+  padding: 24px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.plan-meta div {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.plan-meta strong {
+  display: block;
+  font-size: 1.2rem;
+  opacity: 1;
+  margin-top: 4px;
+}
+
+.plan-sections {
+  padding: 30px;
+  display: grid;
+  gap: 24px;
+}
+
+.meal-section {
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  border-left: 4px solid var(--green-500);
+}
+
+.meal-section h3 {
+  font-size: 1.2rem;
+  color: var(--gray-800);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.meal-section p {
+  color: var(--gray-700);
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.notes-section {
+  background: var(--amber-50);
+  border-left-color: var(--amber-500);
+}
+
+.notes-section h3 {
+  color: var(--amber-700);
+}

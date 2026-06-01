@@ -1,0 +1,5 @@
+[PASS] Expected=MILD        Got=Mild        Confidence=85.0%  BadFlags=0
+[PASS] Expected=MODERATE    Got=Moderate    Confidence=70.0%  BadFlags=2
+[PASS] Expected=SEVERE      Got=Severe      Confidence=75.0%  BadFlags=7
+
+ALL TESTS PASSED!

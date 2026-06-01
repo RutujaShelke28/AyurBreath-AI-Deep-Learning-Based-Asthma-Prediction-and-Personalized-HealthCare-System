@@ -1,0 +1,181 @@
+.doctor-dash-page {
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.dash-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.dash-header h1 {
+  margin: 0;
+  color: var(--gray-900);
+  font-size: 2.2rem;
+}
+
+.analysis-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+}
+
+.analysis-card h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: var(--gray-800);
+  font-size: 1.5rem;
+}
+
+.analysis-table-wrapper {
+  overflow-x: auto;
+}
+
+.analysis-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.analysis-table th, .analysis-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.analysis-table th {
+  background-color: var(--gray-50);
+  color: var(--gray-700);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.analysis-table tbody tr:hover {
+  background-color: var(--gray-50);
+}
+
+.patient-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.patient-cell img {
+  border-radius: 50%;
+  border: 2px solid var(--gray-100);
+}
+
+.patient-cell div {
+  display: flex;
+  flex-direction: column;
+}
+
+.patient-name {
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+.patient-email {
+  font-size: 0.85rem;
+  color: var(--gray-500);
+}
+
+.dosha-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.badge-vata { background-color: #e0f2fe; color: #0369a1; }
+.badge-pitta { background-color: #ffedd5; color: #c2410c; }
+.badge-kapha { background-color: #dcfce7; color: #15803d; }
+.badge-pending { background-color: var(--gray-100); color: var(--gray-600); }
+
+.severity-High { color: #dc2626; font-weight: 600; }
+.severity-Moderate { color: #d97706; font-weight: 600; }
+.severity-Low { color: #16a34a; font-weight: 600; }
+.severity-Normal { color: #2563eb; font-weight: 600; }
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-icon {
+  background: none;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 8px;
+  cursor: pointer;
+  color: var(--gray-600);
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon:hover {
+  background: var(--gray-100);
+  color: var(--gray-900);
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: var(--radius-lg);
+  width: 90%;
+  max-width: 500px;
+  box-shadow: var(--shadow-lg);
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  color: var(--gray-900);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.modal-content label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--gray-800);
+  font-size: 0.95rem;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius);
+  margin-bottom: 20px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}

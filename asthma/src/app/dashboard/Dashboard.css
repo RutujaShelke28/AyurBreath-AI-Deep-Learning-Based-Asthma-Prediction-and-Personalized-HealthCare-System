@@ -1,0 +1,237 @@
+/* Layout Structure */
+.dashboard-page {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main Content Area */
+.dashboard-main {
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Topbar */
+.dash-topbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 10px 0;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  padding: 12px 20px;
+  border-radius: 50px;
+  width: 380px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+.search-bar input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  color: var(--gray-800);
+}
+.search-bar input::placeholder { color: var(--gray-400); }
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  color: var(--gray-400);
+}
+.topbar-icon { cursor: pointer; transition: color 0.2s; }
+.topbar-icon:hover { color: var(--green-600); }
+
+
+/* Inner Container */
+.dashboard-container { 
+  max-width: 1100px;
+  width: 100%;
+}
+
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.dash-header h1 { font-size: 1.8rem; margin-bottom: 0; }
+.dash-header p { color: var(--gray-500); font-size: 15px; }
+.dash-header-actions { display: flex; align-items: center; gap: 12px; }
+.dosha-pill {
+  padding: 10px 20px;
+  background: var(--green-100);
+  color: var(--green-800);
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex; align-items: center; gap: 8px;
+}
+
+/* Charts Layout */
+.charts-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.chart-card { padding: 24px; flex: 1; }
+.chart-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 24px; color: var(--gray-800); }
+
+/* Stats (Mini Widgets) */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px;
+}
+.stat-icon {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.stat-info { flex: 1; }
+.stat-value { font-size: 1.3rem; font-weight: 800; color: var(--gray-900); }
+.stat-label { font-size: 12px; color: var(--gray-500); font-weight: 500; }
+
+/* Tasks (Client Message lookalike) */
+.tasks-card { flex: 1; padding: 24px; }
+.tasks-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.tasks-header h3 { font-size: 15px; font-weight: 700; color: var(--gray-800); }
+.tasks-progress { display: flex; align-items: center; gap: 10px; font-size: 12px; color: var(--gray-400); font-weight: 600; }
+.tasks-progress-bar { width: 80px; height: 6px; background: var(--gray-100); border-radius: 3px; overflow: hidden; }
+.tasks-progress-fill { height: 100%; background: var(--green-500); border-radius: 3px; transition: width 0.5s; }
+
+.tasks-list { display: flex; flex-direction: column; gap: 12px; }
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--gray-100);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.task-item:last-child { border-bottom: none; }
+.task-item:hover .task-name { color: var(--green-600); }
+.task-check {
+  width: 40px; height: 40px;
+  background: var(--green-50);
+  color: var(--green-600);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 700;
+  flex-shrink: 0; transition: all 0.2s;
+}
+.task-check.checked { background: var(--green-500); color: white; }
+.task-info { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.task-name { font-weight: 700; font-size: 14px; color: var(--gray-800); transition: color 0.2s; }
+.task-time { font-size: 12px; color: var(--gray-400); font-weight: 500; }
+
+/* Current Projects Table */
+.project-table {
+  width: 100%;
+}
+.table-header {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr;
+  padding: 12px 24px;
+  color: var(--gray-400);
+  font-size: 12px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--gray-100);
+}
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr;
+  padding: 16px 24px;
+  align-items: center;
+  border-bottom: 1px solid var(--gray-50);
+  font-size: 14px;
+}
+.table-row:last-child { border-bottom: none; }
+.mini-progress-bar { width: 100%; height: 6px; background: var(--gray-100); border-radius: 3px; overflow: hidden; }
+.mini-progress-fill { height: 100%; background: var(--green-500); border-radius: 3px; }
+
+/* Telehealth Banner */
+.telehealth-banner {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  border-radius: var(--radius-lg);
+  padding: 25px 30px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+.telehealth-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.telehealth-text h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.telehealth-text p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.05rem;
+}
+.join-call-btn {
+  background: white;
+  color: #1e3a8a;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.join-call-btn:hover {
+  background: #f0f9ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+@media (max-width: 1024px) {
+  .charts-row { flex-direction: column; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .dashboard-sidebar { width: 220px; padding: 30px 15px; }
+}
+@media (max-width: 768px) {
+  .dashboard-page { flex-direction: column; overflow: visible; }
+  .dashboard-sidebar { width: 100%; height: auto; border-right: none; border-bottom: 1px solid var(--gray-200); padding: 20px; }
+  .dashboard-main { height: auto; overflow: visible; padding: 20px; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .search-bar { width: 100%; }
+}
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,91 @@
+.doctor-diet-page {
+  min-height: 100vh;
+  padding: 100px 20px 60px;
+  background-color: var(--gray-50);
+}
+
+.doctor-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.doctor-header {
+  margin-bottom: 40px;
+}
+
+.doctor-header h1 {
+  font-size: 2.2rem;
+  color: var(--gray-900);
+  margin-bottom: 10px;
+}
+
+.doctor-header p {
+  color: var(--gray-600);
+  font-size: 1.1rem;
+}
+
+.doctor-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--gray-200);
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: 8px;
+}
+
+.patient-select, .diet-textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  color: var(--gray-800);
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.patient-select:focus, .diet-textarea:focus {
+  outline: none;
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 3px rgba(106, 168, 142, 0.15);
+}
+
+.diet-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.success-message {
+  margin-top: 20px;
+  padding: 16px;
+  background-color: var(--green-50);
+  border: 1px solid var(--green-200);
+  border-radius: var(--radius);
+  color: var(--green-800);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}

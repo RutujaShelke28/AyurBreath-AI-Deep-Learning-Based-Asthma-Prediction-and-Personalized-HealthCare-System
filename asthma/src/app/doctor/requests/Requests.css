@@ -1,0 +1,77 @@
+.requests-page {
+  min-height: 100vh;
+  padding: 100px 20px 60px;
+  background-color: var(--gray-50);
+}
+
+.requests-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.requests-header {
+  margin-bottom: 40px;
+}
+
+.requests-header h1 {
+  font-size: 2.2rem;
+  color: var(--gray-900);
+  margin-bottom: 10px;
+}
+
+.requests-header p {
+  color: var(--gray-600);
+  font-size: 1.1rem;
+}
+
+.request-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.patient-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.patient-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid var(--gray-200);
+}
+
+.patient-info h3 {
+  color: var(--gray-900);
+  margin-bottom: 4px;
+  font-size: 1.2rem;
+}
+
+.patient-info p {
+  color: var(--gray-500);
+  font-size: 0.9rem;
+}
+
+.request-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--gray-300);
+  color: var(--gray-500);
+}

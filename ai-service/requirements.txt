@@ -1,0 +1,2 @@
+# Use requirements-fixed.txt for installs (TensorFlow removed — model uses scikit-learn/joblib)
+-r requirements-fixed.txt

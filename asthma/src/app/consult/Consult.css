@@ -1,0 +1,157 @@
+.consult-page {
+  min-height: 100vh;
+  padding: 40px 40px;
+  width: 100%;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+}
+
+.consult-container {
+  max-width: 1200px;
+  padding: 0;
+}
+
+.consult-header {
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.consult-header h1 {
+  font-size: 2.5rem;
+  color: var(--gray-900);
+  margin-bottom: 12px;
+}
+
+.consult-header p {
+  color: var(--gray-600);
+  font-size: 1.1rem;
+  max-width: none;
+  margin: 0;
+}
+
+.doctors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: flex-start;
+}
+
+.doctor-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  width: 320px;
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.doc-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  border: 4px solid var(--green-50);
+}
+
+.doctor-card h3 {
+  font-size: 1.3rem;
+  color: var(--gray-900);
+  margin-bottom: 5px;
+}
+
+.doc-spec {
+  color: var(--green-600);
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.doc-meta {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  color: var(--gray-500);
+  font-size: 0.9rem;
+}
+
+.doc-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.req-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.req-btn-primary {
+  background-color: var(--green-600);
+  color: white;
+}
+
+.req-btn-primary:hover {
+  background-color: var(--green-700);
+}
+
+.req-btn-pending {
+  background-color: var(--amber-100);
+  color: var(--amber-800);
+  cursor: not-allowed;
+}
+
+.req-btn-accepted {
+  background: var(--green-50);
+  color: var(--green-700);
+  border-color: var(--green-200);
+}
+
+/* Telehealth Banner inside Doctor Card */
+.telehealth-card-banner {
+  margin-top: 15px;
+  padding: 12px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.telehealth-card-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #1e3a8a;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.join-call-btn-small {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.join-call-btn-small:hover {
+  background: #2563eb;
+}

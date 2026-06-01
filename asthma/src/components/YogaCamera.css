@@ -1,0 +1,224 @@
+.yoga-camera-container {
+  background: white;
+  border-radius: var(--radius-xl, 16px);
+  padding: 24px;
+  box-shadow: var(--shadow-lg, 0 10px 25px rgba(0, 0, 0, 0.05));
+  margin-top: 40px;
+  border: 1px solid var(--gray-200, #e5e7eb);
+  overflow: hidden;
+}
+
+.yoga-camera-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.camera-title-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.camera-icon {
+  color: var(--green-600, #16a34a);
+}
+
+.camera-title-group h2 {
+  font-size: 1.5rem;
+  color: var(--gray-900, #111827);
+  margin: 0;
+}
+
+.camera-btn {
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.start-btn {
+  background: var(--green-600, #16a34a);
+  color: white;
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);
+}
+
+.start-btn:hover {
+  background: var(--green-700, #15803d);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(22, 163, 74, 0.3);
+}
+
+.stop-btn {
+  background: var(--rose-100, #ffe4e6);
+  color: var(--rose-700, #be123c);
+}
+
+.stop-btn:hover {
+  background: var(--rose-200, #fecdd3);
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: var(--gray-900, #111827);
+  border-radius: var(--radius-lg, 12px);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-wrapper.active {
+  box-shadow: inset 0 0 0 4px rgba(22, 163, 74, 0.2);
+}
+
+.camera-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--gray-400, #9ca3af);
+  text-align: center;
+  padding: 20px;
+}
+
+.camera-placeholder p {
+  font-size: 1.1rem;
+  max-width: 300px;
+}
+
+.webcam-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scaleX(-1); /* Mirror effect */
+}
+
+.ai-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.scanning-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(74, 222, 128, 0.8);
+  box-shadow: 0 0 10px rgba(74, 222, 128, 0.8), 0 0 20px rgba(74, 222, 128, 0.5);
+  animation: scan 3s infinite linear;
+}
+
+@keyframes scan {
+  0% { top: 10%; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 90%; opacity: 0; }
+}
+
+.bounding-box {
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  right: 20%;
+  bottom: 15%;
+  border: 1px solid rgba(74, 222, 128, 0.2);
+}
+
+.corner {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-color: #4ade80;
+  border-style: solid;
+}
+
+.top-left {
+  top: -2px; left: -2px;
+  border-width: 3px 0 0 3px;
+}
+.top-right {
+  top: -2px; right: -2px;
+  border-width: 3px 3px 0 0;
+}
+.bottom-left {
+  bottom: -2px; left: -2px;
+  border-width: 0 0 3px 3px;
+}
+.bottom-right {
+  bottom: -2px; right: -2px;
+  border-width: 0 3px 3px 0;
+}
+
+.feedback-badge {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  font-size: 1.05rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.feedback-badge.info {
+  border: 1px solid rgba(59, 130, 246, 0.5);
+}
+
+.feedback-badge.info .lucide {
+  color: #60a5fa;
+}
+
+.feedback-badge.warning {
+  border: 1px solid rgba(245, 158, 11, 0.5);
+}
+
+.feedback-badge.warning .lucide {
+  color: #fbbf24;
+}
+
+.feedback-badge.success {
+  border: 1px solid rgba(34, 197, 94, 0.5);
+}
+
+.feedback-badge.success .lucide {
+  color: #4ade80;
+}
+
+.animate-spin-slow {
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.camera-disclaimer {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--gray-500, #6b7280);
+}
